@@ -10,6 +10,10 @@ layout: default
     </button>
   </div>
   <h1 class="title">{{ page.title }}</h1>
-  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
   {{ content }}
+</section>
+
+<section class="outro">
+<h3>Copyright © 2020-2025 ShazStar.</h3>
 </section>

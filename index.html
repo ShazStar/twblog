@@ -16,7 +16,7 @@ layout: default
 <a href="https://shazstar.github.io">首頁</a>
 <a href="https://shazstar.github.io/blog">ENG Blog</a>
 <a href="{{ site.url }}/tags">標籤</a>
-<a href="{{ site.url }}/categories">分類</a>
+<a href="{{ site.url }}/categories">類別</a>
 <a href="{{ site.url }}/feed.xml">RSS</a>
 <a href="{{ site.url }}/about">關於</a>
 </div>
@@ -26,7 +26,11 @@ layout: default
         {% for post in site.posts %}
         <li>
             <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time></li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></li>
         {% endfor %}
     </ul>
+</section>
+
+<section class="outro">
+<h3>Copyright © 2020-2025 ShazStar.</h3>
 </section>
