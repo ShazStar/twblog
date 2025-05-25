@@ -1,0 +1,35 @@
+---
+title: 標籤
+layout: default
+---
+
+<section class="intro">
+ <div class="flex-row-between">
+ <h1>標籤</h1>
+    <button id="theme-toggle" onclick="modeSwitcher()">
+        <div></div>
+    </button>
+  </div>
+<p>以標籤分類的文章。</p>
+</section>
+<div class="flex-row-between">
+<a href="{{site.url}}/">« 返回</a>
+<a href="https://shazstar.github.io">首頁</a>
+<a href="https://shazstar.github.io/blog">英文Blog</a>
+<a href="{{ site.baseurl }}/categories">分類</a>
+<a href="{{ site.baseurl }}/feed.xml">RSS</a>
+<a href="{{ site.baseurl }}/about">關於</a>
+</div>
+
+<section class="posts">
+  {% for tag in site.tags %}
+  <h3>{{ tag[0] }}</h3>
+  <ul>
+    {% for post in tag[1] %}
+    <li>
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
+{% endfor %}
+{% endfor %}
+  </ul>
+</section>

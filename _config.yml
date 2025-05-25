@@ -1,7 +1,7 @@
 site: Asko
-url: #yoururl
-title: Asko
-description: Simple and minimalistic jekyll blogging theme.
+url: https://shazstar.github.io/twblog
+title: ShazStar. // 個人Blog.
+description: ShazStar的中文版個人Blog.
 googlewebfonts: Fira+Code:wght@400;500;700
 twitter:
   username: #yourusername
@@ -29,7 +29,7 @@ compress_html:
 sass:
   sass_dir:          _sass
   style:            :compressed
-
+  
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag

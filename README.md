@@ -1,28 +1,5 @@
-# Asko
+# ShazStar的中文Blog.
 
-Asko is a simple and minimalistic jekyll blogging theme.  
-Forked from [Sidey theme](https://github.com/ronv/sidey).  
-Thanks to [Asko Nõmm](https://www.askonomm.com/) that gave me permission to copy his blog theme.
+個人的中文Blog區, 分享一些個人事物跟寫一些雜七雜八的東西上來。
 
-### Features
-
-- Responsive design
-- Dark/Light theme
-- Inline CSS
-- Anchor headings
-- Tags & tag pages
-- Security headers (for Netlify hosting)
-- 404 page
-- Compressed CSS and HTML
-- 100/100 score on Lighthouse, Page Speed Insights & Webpagetest
-- Robots.txt
-- Atom & Json feeds
-- Sass
-- Seo optimized (Twitter cards, Facebook Open Graph, Schema.org)
-- Ultra fast (Only ~5kb of CSS)
-
-### Screenshot
-
-![Screenshot light](screenshot-light.png)
-
-![Screenshot dark](screenshot-dark.png)
+Powered by Jekyll. 主題/Themes: [Asko](https://github.com/manuelmazzuola/asko), 作者/Author: [Manuel Mazzuola](https://github.com/manuelmazzuola)
