@@ -16,9 +16,9 @@ layout: default
 <a href="{{site.url}}/">« 返回</a>
 <a href="https://shazstar.github.io">首頁</a>
 <a href="https://shazstar.github.io/blog">英文Blog</a>
-<a href="{{ site.baseurl }}/categories">分類</a>
-<a href="{{ site.baseurl }}/feed.xml">RSS</a>
-<a href="{{ site.baseurl }}/about">關於</a>
+<a href="{{ site.url }}/categories">分類</a>
+<a href="{{ site.url }}/feed.xml">RSS</a>
+<a href="{{ site.url }}/about">關於</a>
 </div>
 
 <section class="posts">
@@ -27,7 +27,7 @@ layout: default
   <ul>
     {% for post in tag[1] %}
     <li>
-    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
     </li>
 {% endfor %}
 {% endfor %}

@@ -15,17 +15,17 @@ layout: default
 <div class="flex-row-between">
 <a href="https://shazstar.github.io">首頁</a>
 <a href="https://shazstar.github.io/blog">英文Blog</a>
-<a href="{{ site.baseurl }}/tags">標籤</a>
-<a href="{{ site.baseurl }}/categories">分類</a>
-<a href="{{ site.baseurl }}/feed.xml">RSS</a>
-<a href="{{ site.baseurl }}/about">關於</a>
+<a href="{{ site.url }}/tags">標籤</a>
+<a href="{{ site.url }}/categories">分類</a>
+<a href="{{ site.url }}/feed.xml">RSS</a>
+<a href="{{ site.url }}/about">關於</a>
 </div>
 <section class="posts">
     <h3>BLOG</h3>
     <ul>
         {% for post in site.posts %}
         <li>
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time></li>
         {% endfor %}
     </ul>
