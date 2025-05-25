@@ -1,5 +1,5 @@
 site: Asko
-url: https://shazstar.github.io/twblog
+url: "https://shazstar.github.io/"
 title: ShazStar. // 個人Blog.
 description: ShazStar的中文版個人Blog.
 googlewebfonts: Fira+Code:wght@400;500;700
@@ -15,7 +15,7 @@ author:
   url: #yoururl
 permalink: pretty
 
-baseurl: ""
+baseurl: "/twblog"
 
 highlighter: rouge
 
