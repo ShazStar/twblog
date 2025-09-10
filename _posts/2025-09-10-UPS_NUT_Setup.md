@@ -11,8 +11,8 @@ UPS的型號是APC Back-UPS Pro 700. 在線互動式，700VA/420W, 6個插座（
 
 UPS 擺設 + 近距離:
 
-<img src="{{ site.baseurl }}/images/20250910_UPS/UPS_Placement.jpeg" width="300"/>
-<img src="{{ site.baseurl }}/images/20250910_UPS/Close_Up.jpeg" width="300"/>
+<img src="{{ site.baseurl }}/twblog/images/20250910_UPS/UPS_Placement.jpeg" width="300"/>
+<img src="{{ site.baseurl }}/twblog/images/20250910_UPS/Close_Up.jpeg" width="300"/>
 
 # 硬體配置
 
@@ -27,7 +27,7 @@ UPS 擺設 + 近距離:
 ## NUT主從電腦設定
 
 首先，我們得先確認UPS有接上電腦並有辨識出，在終端機打上 `lsusb` 列出所有連接的USB設備。
-<img src="{{ site.baseurl }}/images/20250910_UPS/lsusb.png" width="800"/>
+<img src="{{ site.baseurl }}/twblog/images/20250910_UPS/lsusb.png" width="800"/>
 可以看到在Bus 003 Device 002是UPS連接的地方，記下來。
 
 重要筆記: 因為Proxmox可以使用root權限，所以我不需要使用sudo, 請依照你配置電腦來判斷是否需要使用sudo
@@ -77,7 +77,7 @@ upsmon master
 
 重新開機後，用這個指令確認UPS連接狀態: `upsc ups@localhost`
 
-你會看到這個: <img src="{{ site.baseurl }}/images/20250910_UPS/upsc_master.png" width="800"/>
+你會看到這個: <img src="{{ site.baseurl }}/twblog/images/20250910_UPS/upsc_master.png" width="800"/>
 
 這就代表設定是成功的，NUT可以抓到UPS的資料。
 
@@ -100,20 +100,20 @@ upsset.conf:
 
 全部完成後就可以使用這個網頁去看UPS資訊了: `http://192.168.x.x/cgi-bin/nut/upsstats.cgi`, 把x.x改成你主從電腦的ip位置。
 
-<img src="{{ site.baseurl }}/images/20250910_UPS/cgi.png" width="800"/>
+<img src="{{ site.baseurl }}/twblog/images/20250910_UPS/cgi.png" width="800"/>
 
 ## 隨從電腦設定
 
 上面都處理完後就可以開始搞隨從電腦了, TrueNAS Scale, macOS, Linux跟Windows都會列出。
 
 ### TrueNAS Scale
-設置其實非常簡單明瞭，你只需要去系統設定-> 服務並在那邊設定UPS服務就行了，直接看圖片設置就懂了： <img src="{{ site.baseurl }}/images/20250910_UPS/TrueNAS_Setup.png" width="800"/>
+設置其實非常簡單明瞭，你只需要去系統設定-> 服務並在那邊設定UPS服務就行了，直接看圖片設置就懂了： <img src="{{ site.baseurl }}/twblog/images/20250910_UPS/TrueNAS_Setup.png" width="800"/>
 
 設定完後，記得啟用服務並勾選自動啟動。
 
 驗證連線狀態，去系統設定-> Shell打上這串指令，但這次把localhost改成主從PC的ip位置: `upsc ups@192.168.x.x`
 
-如果設定成功的話你就能看到UPS資訊回報了: <img src="{{ site.baseurl }}/images/20250910_UPS/upsc_slave_truenas.png" width="800"/>
+如果設定成功的話你就能看到UPS資訊回報了: <img src="{{ site.baseurl }}/twblog/images/20250910_UPS/upsc_slave_truenas.png" width="800"/>
 
 ### Linux
 其實我並沒有Linux裝置接上UPS (TrueNAS跟Proxmox不算), 但我還是決定把Linux的部分寫出來供有需要的人使用，但可能會因你使用的Distro有所差異，我會寫Arch Linux的因為我個人是用Arch Linux.
@@ -262,7 +262,7 @@ AT SHUTDOWN * EXECUTE powerdown
 設定完成後用 `brew services start nut`來啟動nut服務.
 
 可以用同個指令驗證: `upsc ups@192.168.x.x`
-<img src="{{ site.baseurl }}/images/20250910_UPS/upsc_slave_mac.png" width="800"/>
+<img src="{{ site.baseurl }}/twblog/images/20250910_UPS/upsc_slave_mac.png" width="800"/>
 
 
 ### Windows
@@ -270,10 +270,10 @@ AT SHUTDOWN * EXECUTE powerdown
 Windows的設定也非常簡單，你只需要安裝 [WinNUT Client](https://github.com/nutdotnet/WinNUT-Client) 後設定就好了，這邊不需要詳細解說因為他有GUI介面。
 
 WinNUT 設定:
-<img src="{{ site.baseurl }}/images/20250910_UPS/WinNUT_Setup.png" width="800"/>
+<img src="{{ site.baseurl }}/twblog/images/20250910_UPS/WinNUT_Setup.png" width="800"/>
 
 WinNUT Client:
-<img src="{{ site.baseurl }}/images/20250910_UPS/WinNUT.png" width="800"/>
+<img src="{{ site.baseurl }}/twblog/images/20250910_UPS/WinNUT.png" width="800"/>
 
 **有用連接**
 
